@@ -148,6 +148,17 @@
             color: #bc6c25;
             margin-bottom: 10px;
         }
+        
+        /* Nova classe para avisos de saúde/farmacológicos */
+        .alert-box {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            border: 1px solid #ffeeba;
+        }
 
         footer {
             text-align: center;
@@ -162,27 +173,28 @@
 <div class="container">
     <header>
         <h1>Ela Central | Skincare & Rotina</h1>
-        <p>Seus protocolos de pele e rotina diária completa de nutrição, treinos e suplementos</p>
+        <p>Protocolos de pele e rotina diária otimizada de nutrição, treinos e suplementos</p>
     </header>
 
     <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'rotinaDiaria')">🕒 Rotina Diária & Suplementos</button>
         <button class="tab-btn" onclick="switchTab(event, 'protocolo1')">1. Resgate & Calma (Anti-Surto)</button>
         <button class="tab-btn" onclick="switchTab(event, 'protocolo2')">2. Transição & Azelan</button>
-        <button class="tab-btn" onclick="switchTab(event, 'protocolo3')">3. Polimento & Poros (Avançado)</button>
+        <button class="tab-btn" onclick="switchTab(event, 'protocolo3')">3. Polimento Seguro (Vitanol)</button>
     </div>
 
     <!-- ROTINA DIÁRIA -->
     <div id="rotinaDiaria" class="protocol-content active">
         <span class="badge">Metabolismo, Nutrição & Performance</span>
         <h2>🕒 Rotina Diária Completa</h2>
-        <p>Cronograma detalhado de hidratação, suplementação estratégica, refeições feitas na hora e horários de treino.</p>
+        <div class="alert-box">
+            <strong>⚠️ Atenção Metabólica:</strong> Como a dose de NAC é alta (1.200mg/dia), lembre-se de ciclar a cada 3 meses para não esgotar as reservas de zinco e cobre do organismo.
+        </div>
 
         <div class="day-card">
-            <h3>🌅 06:00 - Ativação Matinal & Correção Metabólica</h3>
+            <h3>🌅 06:00 - Ativação Matinal (Estômago Vazio)</h3>
             <ul>
                 <li><strong>Água:</strong> 300 ml</li>
-                <li><strong>Vitamina D3+K2:</strong> 10 gotas</li>
                 <li><strong>Inositol:</strong> 1.000 mg</li>
                 <li><strong>NAC:</strong> 600 mg</li>
             </ul>
@@ -193,76 +205,99 @@
             <ul>
                 <li><strong>Água & Creatina:</strong> 200 ml de água com Creatina Monohidratada (5 g)</li>
                 <li><strong>Mini Panqueca (feita na hora):</strong> 1 ovo + 1/2 banana + 1 colher de sopa de aveia</li>
-                <li><strong>Medicação:</strong> Wellbutrin XL (Uso médico)</li>
                 <li><strong>Treino:</strong> 06:45 às 07:45 — Musculação Pesada</li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>🍳 08:30 - Pós-Treino & Café da Manhã (Feito na hora)</h3>
+            <h3>💧 07:45 - Pós-Treino Imediato (A Janela de Absorção)</h3>
             <ul>
-                <li><strong>Panqueca Simples Recheada:</strong> 1 ovo + 1 colher de sopa de aveia, recheada com 30g a 40g de carne moída + 15g a 20g de creme de ricota light</li>
-                <li><strong>Kefir Natural:</strong> 1 copo (150 ml) + 1 xícara de frutas vermelhas</li>
+                <li><strong>O Segredo da Pele/Músculo:</strong> Tomar apenas com água, de estômago livre de outras proteínas para não competir absorção:</li>
+                <li><strong>L-Glutamina:</strong> 5 g (reparação muscular e barreira intestinal)</li>
                 <li><strong>Colágeno Verisol:</strong> 3 comprimidos</li>
-                <li><strong>L-Glutamina:</strong> 5 g (recuperação muscular e barreira intestinal)</li>
+                <li><strong>Exsynutriment (Silício Orgânico):</strong> 150 mg (O construtor do colágeno)</li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>🥤 11:00 - Estratégia de Saciedade & Intestino</h3>
+            <h3>🍳 08:30 - Café da Manhã Sólido (Com Gorduras)</h3>
             <ul>
-                <li><strong>Psyllium:</strong> 10 g em 300–400 ml de água (+ 1 copo extra de água) — <em>(Respeitar a janela de 2h de qualquer medicação)</em></li>
+                <li><strong>Panqueca Simples Recheada:</strong> 1 ovo + 1 colher de aveia, recheada com 30-40g de carne moída + 15-20g de creme de ricota</li>
+                <li><strong>Kefir Natural:</strong> 1 copo (150 ml) + 1 xícara de frutas vermelhas</li>
+                <li><strong>Vitamina D3+K2:</strong> 10 gotas <em>(Aproveita a gordura da gema/carne para absorver)</em></li>
+                <li><strong>Medicações & Suplementos:</strong> Wellbutrin XL <em>(movido para cá para evitar taquicardia no treino)</em> | Pill Food: 1 cápsula <em>(energia B longe da noite)</em></li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>🥗 13:00 - Almoço Otimizado (Empresa)</h3>
+            <h3>🥤 11:00 - Limpeza & Saciedade</h3>
             <ul>
-                <li><strong>Proteína:</strong> 1 pote de 130g de Estrogonofe de Frango OU 100g de Patinho Moído</li>
+                <li><strong>Psyllium:</strong> 10 g em 300–400 ml de água (+ 1 copo extra de água) — <em>(Isolado para não roubar nutrientes)</em></li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>🍎 12:45 - Preparo Glicêmico (Estômago Vazio)</h3>
+            <ul>
+                <li><strong>Vinagre de Maçã:</strong> 1 colher de sopa em 150 ml de água (Beber com canudo e enxaguar a boca depois)</li>
+                <li><strong>Morosil:</strong> 500 mg <em>(Ataque direto à gordura com a insulina baixa)</em></li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>🥗 13:00 - Almoço Otimizado (Absorção Lipídica)</h3>
+            <ul>
+                <li><strong>Proteína:</strong> 130g de Estrogonofe de Frango OU 100g de Patinho Moído</li>
                 <li><strong>Carboidrato:</strong> Exatos 40g de Batata-Doce Roxa</li>
-                <li><strong>Mix de Vegetais:</strong> Metade do mix (Brócolis 60g + Vagem 40g + Cenoura 15g + Edamame 10g) ou quantidade confortável</li>
+                <li><strong>Mix de Vegetais:</strong> Brócolis, Vagem, Cenoura, Edamame</li>
                 <li><strong>Probiótico:</strong> 50g de Super Kimchi Caseiro</li>
-                <li><strong>Suplementação:</strong> Saw Palmetto: 320 mg (1ª dose) | Silimarina: 400 mg | Vitamina C Ultra: 1 cápsula | Ômega 3 Ultra: 2 cápsulas</li>
+                <li><strong>Sinergia Vascular:</strong> Vitamina C Ultra (1 cápsula) + Pinus Pinaster (150 mg)</li>
+                <li><strong>Suplementação Extra:</strong> Saw Palmetto: 320 mg (Dose Única Diária) | Silimarina: 400 mg | Ômega 3 Ultra: 2 cápsulas</li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>🥞 15:30 - Lanche da Tarde Anti-inflamatório (Feito na hora)</h3>
+            <h3>🥞 15:30 - Lanche da Tarde Anti-inflamatório</h3>
             <ul>
-                <li><strong>Panqueca Dourada Recheada:</strong> 1 ovo + 1 colher de sopa de aveia + cenoura ralada + cúrcuma + pimenta-do-reino, recheada com 30g a 40g de carne moída + 15g a 20g de creme de ricota light</li>
+                <li><strong>Panqueca Dourada Recheada:</strong> 1 ovo + aveia + cenoura ralada + cúrcuma + pimenta-do-reino (recheio: carne moída + creme de ricota)</li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>🍅 19:15 - Shot Pré-Jantar</h3>
+            <h3>🏃‍♀️ 18:30 às 20:00 - Cardio Zona 2 (Biogênese Mitocondrial)</h3>
             <ul>
-                <li><strong>Vinagre de Maçã não filtrado:</strong> 1 colher de sopa em 100 ml de água (15 min antes)</li>
+                <li><strong>Atividade:</strong> 5km de caminhada (Ritmo constante, respirando preferencialmente pelo nariz)</li>
+                <li><strong>Foco:</strong> Ensinar o corpo a usar gordura como combustível sem gerar picos de cortisol inflamatórios.</li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>🥗 20:00 - Jantar de Carga e Reparação</h3>
+            <h3>🍅 20:00 - Chegada & Preparo Glicêmico 2</h3>
             <ul>
-                <li><strong>Proteína:</strong> 1 pote de 130g de Estrogonofe de Frango OU 100g de Patinho Moído</li>
+                <li><strong>Vinagre de Maçã:</strong> 1 colher de sopa em 150 ml de água (Aproveitando a alta sensibilidade à insulina pós-cardio)</li>
+            </ul>
+        </div>
+
+        <div class="day-card">
+            <h3>🥗 20:15 - Jantar de Carga e Reparação</h3>
+            <ul>
+                <li><strong>Proteína:</strong> 130g de Estrogonofe de Frango OU 100g de Patinho Moído</li>
                 <li><strong>Carboidrato:</strong> Exatos 40g de Batata-Doce Roxa</li>
-                <li><strong>Vegetal da Noite:</strong> 80g a 100g de folhas de couve refogadas/murchas na hora</li>
+                <li><strong>Vegetal da Noite:</strong> 80g a 100g de folhas de couve refogadas <em>(com 1 fio de Azeite Extra Virgem para saúde hormonal)</em></li>
                 <li><strong>Probiótico:</strong> 50g de Super Kimchi Caseiro</li>
-                <li><strong>Suplementação:</strong> Saw Palmetto: 320 mg (2ª dose)</li>
+                <li><strong>Suplementação Lipossolúvel (Precisa do Azeite/Carne):</strong> Trans-Resveratrol (1 comprimido) | Diosmina + Hesperidina + Centella (2 cápsulas)</li>
             </ul>
         </div>
 
         <div class="day-card">
-            <h3>😴 21:30 - Ceia & Indução ao Sono Regenerativo</h3>
+            <h3>😴 21:30 - Indução ao Sono (Isolado e Calmante)</h3>
             <ul>
-                <li><strong>Líquido Base:</strong> 150 ml a 200 ml de Caldo de Ossos Bovino morninho (sem sal) para ajudar a tomar os manipulados.</li>
-                <li><strong>Manipulados & Suplementos:</strong>
+                <li><strong>Líquido Base:</strong> 150 ml a 200 ml de Caldo de Ossos Bovino morninho</li>
+                <li><strong>Manipulados de Relaxamento:</strong>
                     <ul>
-                        <li>7 magnésios biostevi</li>
-                        <li>Inositol</li>
+                        <li>7 magnésios biostevi <em>(Sem competição mineral agora)</em></li>
+                        <li>Inositol: 1.000 mg</li>
                         <li>NAC: 600 mg (2ª dose)</li>
-                        <li>Diosmina + Hesperidina + Centella: 2 cápsulas</li>
-                        <li>Pill Food: 1 cápsula</li>
-                        <li>Trans-Resveratrol: 1 comprimido</li>
                     </ul>
                 </li>
             </ul>
@@ -332,94 +367,48 @@
         <p>Iniciando o uso do Azelan de manhã em dias alternados para acostumar a barreira cutânea, mantendo o suporte com peptídeos de cobre e reparadores.</p>
 
         <div class="day-card">
-            <h3>Segunda-feira</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + <em>Azelan Gel (1º teste diurno)</em> + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Sérum GHK-CU (Cobre) + Cicaplast Baume B5+.</div>
+            <h3>Segunda, Quarta e Sexta (Azelan Diurno)</h3>
+            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + <em>Azelan Gel</em> + Protetor Solar.</div>
+            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Sérum GHK-CU (Cobre) + Cicaplast Baume B5+ (ou Adacne na Quarta).</div>
         </div>
 
         <div class="day-card">
-            <h3>Terça-feira</h3>
+            <h3>Terça e Quinta (Reparação)</h3>
             <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Sérum GHK-CU + Hidratante + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Sérum GHK-CU + Cicaplast Baume B5+ (geroso).</div>
+            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Sérum GHK-CU (Ter) ou Azelan Noturno (Qui) + Cicaplast.</div>
         </div>
 
         <div class="day-card">
-            <h3>Quarta-feira</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + <em>Azelan Gel (2º teste diurno)</em> + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Adacne Clin (pontual nas borbulhas) + Hidratante.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Quinta-feira</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Sérum GHK-CU + Hidratante + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Azelan Noturno + Cicaplast leve.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Sexta-feira</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + <em>Azelan Gel (3º teste diurno)</em> + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Simple Organic Ultra Sérum + Hidratante.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Sábado</h3>
+            <h3>Sábado e Domingo (Spa & Blindagem)</h3>
             <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Hidratante + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite (Pós-Saída):</strong> Limpeza rápida + Hidratante ou Cicaplast.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Domingo (Spa & Recuperação)</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Hidratante + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Máscara Adcos/Tulípia + Sérum GHK-CU + Cicaplast Baume B5+.</div>
+            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Máscara Facial (Dom) + Sérum GHK-CU + Cicaplast Baume B5+.</div>
         </div>
     </div>
 
     <!-- PROTOCOLO 3 -->
     <div id="protocolo3" class="protocol-content">
-        <span class="badge">Fase 3: Meta Pele de Porcelana (Avançado)</span>
-        <h2>Protocolo 3: Polimento & Poros (Avançado)</h2>
-        <p>Para ser ativado após 2 semanas com pele controlada. Alterne ácidos focados em textura e poros (Glicólico e Salicílico) com a Tretinoína (Vitanol-A).</p>
-
-        <div class="day-card">
-            <h3>Segunda-feira (Renovação Celular)</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Azelan + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + <strong>Vitanol-A 0,05%</strong> (pele seca) + Hidratante/Cicaplast.</div>
+        <span class="badge">Fase 3: Meta Pele de Porcelana (Segura)</span>
+        <h2>Protocolo 3: Polimento Seguro (Vitanol)</h2>
+        <div class="alert-box">
+            <strong>🚨 Regra de Ouro (Proteção da Barreira):</strong> Com a entrada da Tretinoína (Vitanol-A), o Ácido Glicólico e o Salicílico ficam suspensos para não gerar rosácea ativa e rebote. Nunca use GHK-Cu junto com o Vitanol.
         </div>
 
         <div class="day-card">
-            <h3>Terça-feira (Resgate & Cobre)</h3>
+            <h3>Segunda, Quarta e Sexta (Noites de Tretinoína)</h3>
             <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Azelan + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + <strong>Sérum GHK-CU (Cobre)</strong> + Cicaplast Baume B5+.</div>
+            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + <strong>Vitanol-A 0,05%</strong> (Aplicar na pele 100% seca) + Cicaplast por cima.</div>
         </div>
 
         <div class="day-card">
-            <h3>Quarta-feira (Poros & Sebo)</h3>
+            <h3>Terça e Quinta (Noites de Reparação com Cobre)</h3>
             <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Azelan + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + <strong>Simple Organic Ácido Salicílico</strong> + Hidratante.</div>
+            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + <strong>Sérum GHK-CU (Cobre)</strong> + Hidratante Dermotivin.</div>
         </div>
 
         <div class="day-card">
-            <h3>Quinta-feira (Descanso)</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Azelan + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Sérum GHK-CU (Cobre) + Hidratante Dermotivin.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Sexta-feira (Polimento Superficial)</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Azelan + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + <strong>The Ordinary Glycolic Acid 7%</strong> + Hidratante.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Sábado</h3>
+            <h3>Sábado e Domingo (Blindagem do Fim de Semana)</h3>
             <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Hidratante + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite (Pós-Saída):</strong> Limpeza rápida + Cicaplast para dormir.</div>
-        </div>
-
-        <div class="day-card">
-            <h3>Domingo (Spa & Blindagem)</h3>
-            <div class="routine-step"><strong>Manhã:</strong> Limpeza suave + Hada Labo + Hidratante + Protetor Solar.</div>
-            <div class="routine-step"><strong>Noite:</strong> Limpeza suave + Máscara facial + Sérum GHK-CU + Cicaplast Baume B5+ generoso.</div>
+            <div class="routine-step"><strong>Noite:</strong> Máscara Facial (Dom) + Sérum GHK-CU + Cicaplast Baume B5+ generoso.</div>
         </div>
     </div>
 
